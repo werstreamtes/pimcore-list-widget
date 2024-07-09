@@ -1,7 +1,7 @@
 # Pimcore List Widget
 
 <!-- TOC -->
-* [Pimcore Widget](#pimcore-list-widget)
+* [Pimcore List Widget](#pimcore-list-widget)
   * [Requirements](#requirements)
   * [Installation](#installation)
   * [Good to know](#good-to-know)
