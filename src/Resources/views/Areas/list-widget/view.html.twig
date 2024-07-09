@@ -1,0 +1,20 @@
+{% set url = pimcore_input('url') %}
+{% set showNumbers = pimcore_checkbox('showNumbers') %}
+{% set layout = pimcore_select('layout') %}
+{% set limit = pimcore_numeric('limit') %}
+{% set providers = pimcore_multiselect('providers') %}
+
+{% if not url.isEmpty() %}
+    <div class="wse-widget-container {% if layout.getData() == '2' %}wse-columns{% endif %} {% if showNumbers.isChecked() %}wse-numeric{% endif %}"
+         data-filter-url="{{ url.getData() }}"
+         data-partner="{{ pimcore_website_config('wseWidgetTag', 'extern') }}"
+         data-providers="{{ providers.getData | join(",") }}"
+         data-limit="{% if not limit.isEmpty() %}{{ limit.getData() }}{% else %}10{% endif %}">
+    </div>
+    <script src="https://werstreamt.es/_resources/themes/wse/js/list-widget.js"></script>
+{% else %}
+    <div style="background: #f8d7da; padding: 5px 10px; border-radius: 3px; color: #721c24; border: 1px solid #f5c6cb; font-size: 13px;">
+        WerStreamt.es Widget nicht konfiguriert. Es muss mindestens eine URL angegeben werden.<br/>
+        Klicke auf das Bleistift-Symbol um weitere Einstellungen vorzunehmen.
+    </div>
+{% endif %}

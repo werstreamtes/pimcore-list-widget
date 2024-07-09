@@ -1,0 +1,30 @@
+{
+  "name": "werstreamtes/pimcore-list-widget",
+  "type": "pimcore-bundle",
+  "license": "GPL-3.0-or-later",
+  "description": "WerStreamt.es Widget",
+  "keywords": ["pimcore", "werstreamtes", "widget"],
+  "authors": [
+    {
+      "name": "WerStreamt.es",
+      "email": "info@werstreamt.es",
+      "homepage": "https://www.werstreamt.es/",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Pimcore\\Bundle\\WidgetBundle\\": "src/"
+    }
+  },
+  "extra": {
+    "pimcore": {
+      "bundles": [
+        "Pimcore\\Bundle\\WidgetBundle\\WerStreamtEsListWidgetBundle"
+      ]
+    }
+  },
+  "require": {
+    "pimcore/pimcore": "^10.2"
+  }
+}
