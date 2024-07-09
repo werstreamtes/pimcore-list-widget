@@ -13,8 +13,10 @@
     </div>
     <script src="https://werstreamt.es/_resources/themes/wse/js/list-widget.js"></script>
 {% else %}
-    <div style="background: #f8d7da; padding: 5px 10px; border-radius: 3px; color: #721c24; border: 1px solid #f5c6cb; font-size: 13px;">
-        WerStreamt.es Widget nicht konfiguriert. Es muss mindestens eine URL angegeben werden.<br/>
-        Klicke auf das Bleistift-Symbol, um weitere Einstellungen vorzunehmen.
-    </div>
+    {% if editmode %}
+        <div style="background: #f8d7da; padding: 5px 10px; border-radius: 3px; color: #721c24; border: 1px solid #f5c6cb; font-size: 13px;">
+            WerStreamt.es Widget nicht konfiguriert. Es muss mindestens eine URL angegeben werden.<br/>
+            Klicke auf das Bleistift-Symbol, um weitere Einstellungen vorzunehmen.
+        </div>
+    {% endif %}
 {% endif %}
