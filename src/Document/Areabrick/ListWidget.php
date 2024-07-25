@@ -29,7 +29,7 @@ class ListWidget extends AbstractTemplateAreabrick implements EditableDialogBoxI
     /**
      * @return mixed
      */
-    public function getTemplateLocation()
+    public function getTemplateLocation(): string
     {
         return static::TEMPLATE_LOCATION_BUNDLE;
     }
