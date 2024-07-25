@@ -25,10 +25,23 @@ or via composer.json:
 }
 ```
 
-Activate the widget using the following command:
+Activate the widget with the following command:
+
+### Pimcore 10
 ```shell
 bin/console pimcore:bundle:enable WerStreamtEsListWidgetBundle
 ```
+
+### Pimcore 11
+```shell
+bin/console pimcore:bundle:install WerStreamtEsListWidgetBundle
+```
+
+Finally, the plugin must be registered in the `registerBundlesToCollection` function in the `App/Kernel.php` file
+```
+$collection->addBundle(WerStreamtEsListWidgetBundle::class);
+```
+       
 
 ### Good to know
 
