@@ -41,7 +41,6 @@ Finally, the plugin must be registered in the `registerBundlesToCollection` func
 ```
 $collection->addBundle(WerStreamtEsListWidgetBundle::class);
 ```
-       
 
 ### Good to know
 
@@ -51,9 +50,42 @@ Go to the website settings and create a new entry with the key `wseWidgetTag` of
 
 ![General Settings](settings.gif)
 
+### How to style the Widget
+
+There are some basic classes for styling the widget.
+
+The color of the shade used for fading can be overwritten with the following variable:
+```css
+.wse-widget {
+    --shadow-color: #fff;
+}
+```
+
+**Please note:** The shade also exists in dark mode and can be overwritten with the following code:
+```css
+@media (prefers-color-scheme: dark) {
+    .wse-widget {
+        --shadow-color: #000;
+    }
+}
+```
+
+The color of the arrows can be adjusted with the following code:
+```css
+.wse-arrow-fill {
+  fill: #ffffff;
+}
+```
+
+The color of the numbering can be adjusted with the following code:
+```css
+.wse-numeric .wse-elements li.wse-element:before {
+  color: #d90000;
+}
+```
+
 ### Further Information
 
 * [WerStreamt.es Developer Widget Documentation](https://www.werstreamt.es/developers/widget/)
-
 
 Feel free to reach out if you have any questions or issues!
